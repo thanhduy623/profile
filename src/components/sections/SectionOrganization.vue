@@ -1,7 +1,6 @@
 <template>
-    <section id="organization" class="min-w-sm flex flex-col flex-2 gap-2">
+    <section id="organization" class="min-w-sm flex flex-col flex-1 gap-2">
         <h2 class="text-primary uppercase"> {{ $t('title.organization') }} </h2>
-
         <div class="organization-list flex flex-col gap-2">
             <div v-for="(org, index) in organizations" :key="index"
                 class="bg-gray-100 border-l-2 border-primary p-2 transition-all duration-300 ease-in-out hover:shadow-xl hover:bg-sky-100">
@@ -38,15 +37,3 @@
         },
     ];
 </script>
-
-<style scoped>
-    /* Có thể thêm các style tùy chỉnh nếu cần, ví dụ: */
-    .organization-item {
-        transition: transform 0.3s ease;
-    }
-
-    .organization-item:hover {
-        transform: translateX(5px);
-        background-color: #f7f9fc;
-    }
-</style>

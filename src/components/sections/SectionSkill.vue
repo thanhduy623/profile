@@ -1,42 +1,88 @@
 <template>
-    <section id="organization" class="min-w-sm flex flex-col flex-2 gap-2">
+    <section id="skill" class="min-w-sm flex flex-col flex-1 gap-4">
         <h2 class="text-primary uppercase"> {{ $t('title.skill') }} </h2>
+
+        <div class="w-full h-full">
+            <RadarChart :chartData="radarChartData" :chartOptions="radarChartOptions" />
+        </div>
     </section>
 </template>
 
 <script setup>
-    const organizations = [
-        {
-            name: "Sinh viên khoa Công nghệ thông",
-            time: "2022 - Hiện nay",
-            description: "Lộ trình học tập và đào tạo theo chuyên ngành Kỹ thuật phần mềm đạt chuẩn kiểm định AUN-QA. Ban Tổ chức/Cộng tác các cuộc thi khởi nghiệp, học thuật chuyên ngành Công nghệ thông tin. Tích cực tham gia các hoạt động chuyên môn, các buổi hội thảo, chương trình seminar khoa học và công nghệ"
+    import { ref, computed, toRefs } from 'vue';
+    import { useLocalizedData } from '@/utils/useLocalizedData'
+    import RadarChart from '@/components/charts/RadarChart.vue';
+
+    const { currentLang, localizedData: skillList, toggleLanguage } = useLocalizedData('skill.skillList')
+
+
+    console.log(skillList.value);
+
+
+    const rootStyles = getComputedStyle(document.documentElement)
+    const colorPrimary = rootStyles.getPropertyValue('--color-primary').trim()
+    const colorSecondary = rootStyles.getPropertyValue('--color-secondary').trim()
+
+    // 1. Chuẩn bị dữ liệu cho biểu đồ radar
+    const radarChartData = computed(() => {
+        const list = Array.isArray(skillList.value)
+            ? skillList.value
+            : Object.values(skillList.value || {})
+
+        const labels = list.map(item => item.name)
+        const dataPoints = list.map(item => item.point)
+
+        return {
+            labels,
+            datasets: [
+                {
+                    data: dataPoints,
+                    backgroundColor: 'rgba(37, 150, 190, 0.2)',
+                    borderColor: colorPrimary,
+                    pointBackgroundColor: colorPrimary,
+                    pointBorderColor: colorPrimary,
+                    pointHoverBackgroundColor: '#ffffff',
+                    pointHoverBorderColor: colorPrimary,
+                    borderWidth: 2,
+                    fill: true,
+                }
+            ]
+        }
+    })
+
+    // 2. Cấu hình tùy chọn cho biểu đồ radar
+    const radarChartOptions = ref({
+        responsive: true,
+        maintainAspectRatio: false, // Quan trọng để kiểm soát kích thước bằng CSS
+        scales: {
+            r: {
+                angleLines: {
+                    display: true
+                },
+                suggestedMin: 3, // Giá trị nhỏ nhất
+                suggestedMax: 10, // Giá trị lớn nhất (Max point5)
+                ticks: {
+                    stepSize: 1, // Khoảng cách giữa các bước
+                    backdropColor: 'transparent',
+                    color: 'transparent', // Màu chữ các giá trị trục
+                },
+                pointLabels: { // Cấu hình nhãn (tên kỹ năng)
+                    font: {
+                        size: 14,
+                        weight: 'bold'
+                    },
+                    color: 'rgb(31 41 55)',
+                }
+            }
         },
-        {
-            name: "Chi ủy viên Chi bộ",
-            time: "2025 - Hiện nay",
-            description: "Công tác tại Chi bộ sinh viên khối Kỹ thuật 2 - Đảng bộ Trường Đại học Tôn Đức Thắng. Được xếp loại: Hoàn thành xuất sắc nhiệm vụ năm 2024, 2025."
-        },
-        {
-            name: "UV. Ủy ban kiểm Tra Đoàn Trường",
-            time: "2024 - Hiện nay",
-            description: "Công tác tại Đoàn Trường Đại học Tôn Đức Thắng và kiêm nhiệm chức vụ Phó Bí thư Đoàn khoa Công nghệ thông tin."
-        },
-        {
-            name: "Học sinh giỏi Tin học",
-            time: "2019 - 2020",
-            description: "Đạt giải học sinh giỏi tin học môn Tin học tại Trường THPT Vĩnh Thuận năm học 2019 - 2020."
-        },
-    ];
+        plugins: {
+            legend: {
+                display: false,
+                position: 'top',
+            },
+            tooltip: {
+                enabled: true
+            }
+        }
+    });
 </script>
-
-<style scoped>
-    /* Có thể thêm các style tùy chỉnh nếu cần, ví dụ: */
-    .organization-item {
-        transition: transform 0.3s ease;
-    }
-
-    .organization-item:hover {
-        transform: translateX(5px);
-        background-color: #f7f9fc;
-    }
-</style>
