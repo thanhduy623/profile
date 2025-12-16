@@ -7,9 +7,5 @@ export default {
     introduction3: "Well-equipped with knowledge in databases and system administration, including design, querying, and performance optimization, combined with requirements analysis to build suitable solutions.",
     introduction4: "Career direction focused on web development, aiming to enhance skills in building and optimizing modern web applications that meet user needs and follow new technology trends.",
 
-    address: "19 Nguyen Huu Thọ, Tan Hung, HCMC",
-    email: "nguyenduy.6203@gmail.com",
-    phone: "(+084) 834828525",
-
     letter: "Thank you for taking the time to review my profile. I hope the information above reflects my abilities, learning mindset, and professional attitude. I look forward to having the opportunity to work together and sincerely welcome any feedback or suggestions to help me improve and grow further in the future. Thank you very much./.",
 }

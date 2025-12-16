@@ -7,15 +7,15 @@
             <h5 class="text-white"> {{ $t('title.contact') }}</h5>
 
             <span class="text-white text-sm">
-                <strong>{{ $t('common.phone') }}</strong>: {{ $t('profile.phone') }}
+                <strong>{{ $t('common.phone') }}</strong>: {{ phone }}
             </span>
 
             <span class="text-white text-sm">
-                <strong>{{ $t('common.email') }}</strong>: {{ $t('profile.email') }}
+                <strong>{{ $t('common.email') }}</strong>: {{ email }}
             </span>
 
             <span class="text-white text-sm">
-                <strong>{{ $t('common.address') }}</strong>: {{ $t('profile.address') }}
+                <strong>{{ $t('common.address') }}</strong>: {{ address }}
             </span>
 
             <div class="flex flex-row gap-2 mt-2">
@@ -42,7 +42,10 @@
 <script setup>
     import { pathLogo } from '@/configs/images'
 
+    const phone = "(+84) 834828525";
+    const email = "nguyenduy.6203@gmail.com";
+    const address = "19 Nguyen Huu Tho, Tan Hung, HCMC";
     const pathZalo = "https://zalo.me/0834828525";
     const pathFacebook = "http://fb.com/PeeZee.6203";
-    const pathGmail = "mailto:nguyenduy.6203@gmail.com";
+    const pathGmail = "mailto:" + email;
 </script>

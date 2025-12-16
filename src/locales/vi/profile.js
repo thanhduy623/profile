@@ -7,9 +7,5 @@ export default {
     introduction3: "Trang bị tốt kiến thức về cơ sở dữ liệu và quản trị hệ thống bao gồm thiết kế, truy vấn và tối ưu hiệu năng dữ liệu, kết hợp phân tích yêu cầu để xây dựng giải pháp phù hợp.",
     introduction4: "Định hướng cá nhân phát triển sự nghiệp trong lĩnh vực web, tập trung nâng cao kỹ năng xây dựng và tối ưu hóa các ứng dụng web hiện đại, đáp ứng nhu cầu người dùng và xu hướng công nghệ mới.",
 
-    address: "19 Nguyễn Hữu Thọ, Tân Hưng, TP.HCM",
-    email: "nguyenduy.6203@gmail.com",
-    phone: "0834828525",
-
     letter: "Cảm ơn quý đơn vị đã dành thời gian quý báu xem hồ sơ. Hy vọng những thông tin trên phần nào thể hiện được năng lực, tinh thần học hỏi và sự nghiêm túc của tôi trong công việc. Rất mong có cơ hội được hợp tác và nhận được những góp ý, phản hồi để có thể hoàn thiện bản thân và phát triển tốt hơn trong tương lai. Trân trọng cảm ơn./.",
 }

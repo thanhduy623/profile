@@ -11,6 +11,8 @@ export default defineConfig({
     tailwindcss(),
   ],
 
+  base: '/profile/',
+
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
