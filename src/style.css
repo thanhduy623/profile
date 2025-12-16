@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@import "@/assets/css/theme.css" layer(theme);
+@import "@/assets/css/layer.css" layer(layer);
+
+
+:root {
+  --color-primary: #021182;
+  --color-secondary: #38bdf8;
+
+  /* --color-background: #E3E3E3; */
+  --color-white: #ffffff;
+
+
+  color: #202020;
+  background-color: var(--color-background);
+  font-family: system-ui, Helvetica, Arial, sans-serif;
+  text-align: justify;
+
+}

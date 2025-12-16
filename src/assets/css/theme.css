@@ -1,0 +1,26 @@
+@theme {
+    --color-primary: var(--color-primary);
+    --color-secondary: var(--color-secondary);
+    --color-background: var(--color-background);
+    --color-white: var(--color-white);
+
+    /* CUSTOM
+   --color-*
+  --font-*
+  --text-*
+  --font-weight-*
+  --tracking-*
+  --leading-*
+  --breakpoint-*
+  --container-*
+  --spacing-*
+  --radius-*
+  --shadow-*
+  --inset-shadow-*
+  --drop-shadow-*
+  --blur-*
+  --perspective-*
+  --aspect-*
+  --ease-*
+  --animate-* */
+}

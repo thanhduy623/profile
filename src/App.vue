@@ -1,0 +1,27 @@
+<template>
+  <HeaderMain />
+  <SectionAbout />
+  <div class="flex flex-row flex-wrap gap-10 p-8">
+    <SectionCompetence />
+    <SectionExperience />
+  </div>
+
+  <div class="flex flex-row flex-wrap gap-10 p-8">
+    <SectionSkill />
+    <SectionSkill />
+    <SectionOrganization />
+  </div>
+
+  <FooterMain />
+</template>
+
+
+<script setup>
+  import HeaderMain from '@/components/headers/HeaderMain.vue'
+  import FooterMain from '@/components/footers/FooterMain.vue'
+  import SectionAbout from '@/components/sections/SectionAbout.vue'
+  import SectionCompetence from '@/components/sections/SectionCompetence.vue'
+  import SectionExperience from '@/components/sections/SectionExperience.vue'
+  import SectionSkill from '@/components/sections/SectionSkill.vue'
+  import SectionOrganization from '@/components/sections/SectionOrganization.vue'
+</script>
