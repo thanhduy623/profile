@@ -26,8 +26,6 @@
     function toggleLanguage() {
         currentIndex.value = (currentIndex.value + 1) % languages.length
         locale.value = languages[currentIndex.value].code
-        console.log(experienceList.value);
-
     }
 </script>
 

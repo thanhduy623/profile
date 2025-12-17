@@ -1,5 +1,5 @@
 <template>
-    <section id="organization" class="min-w-sm flex flex-col flex-1 gap-2">
+    <section id="organization" class="flex flex-col flex-1 gap-2 min-w-md">
         <h2 class="text-primary uppercase"> {{ $t('title.organization') }} </h2>
         <div class="organization-list flex flex-col gap-2">
             <div v-for="(org, index) in organizations" :key="index"

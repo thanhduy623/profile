@@ -1,5 +1,5 @@
 <template>
-    <section id="skill" class="min-w-sm flex flex-col flex-1 gap-4">
+    <section id="skill" class="flex flex-col flex-1 gap-4 min-w-sm">
         <h2 class="text-primary uppercase"> {{ $t('title.skill') }} </h2>
 
         <div class="w-full h-full">
@@ -9,15 +9,11 @@
 </template>
 
 <script setup>
-    import { ref, computed, toRefs } from 'vue';
+    import { ref, computed } from 'vue';
     import { useLocalizedData } from '@/utils/useLocalizedData'
     import RadarChart from '@/components/charts/RadarChart.vue';
 
     const { currentLang, localizedData: skillList, toggleLanguage } = useLocalizedData('skill.skillList')
-
-
-    console.log(skillList.value);
-
 
     const rootStyles = getComputedStyle(document.documentElement)
     const colorPrimary = rootStyles.getPropertyValue('--color-primary').trim()

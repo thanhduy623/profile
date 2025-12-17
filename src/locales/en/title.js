@@ -6,7 +6,7 @@ export default {
     score: "Result score",
     resultStudy: "Kết quả học tập",
     resultPractice: "Kết quả rèn luyện",
-    organization: "Organizational activities",
+    organization: "Work process",
     contact: "Contact information",
     thanks: "Thanks letter",
 }

@@ -3,6 +3,8 @@ import profile from './profile'
 import title from './title'
 import experience from './experience'
 import skill from './skill'
+import project from './project'
+
 
 export default {
     common,
@@ -10,4 +12,5 @@ export default {
     title,
     experience,
     skill,
+    project,
 }

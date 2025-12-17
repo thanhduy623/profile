@@ -1,5 +1,5 @@
 <template>
-    <section id="score" class="min-w-sm flex flex-col flex-1 gap-2">
+    <section id="score" class="flex flex-col flex-1 gap-2 min-w-sm">
         <!-- Title -->
         <h2 class="text-primary uppercase"> {{ $t('title.score') }} </h2>
 

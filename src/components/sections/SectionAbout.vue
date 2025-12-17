@@ -1,6 +1,6 @@
 <template>
-    <section id="home">
-        <div class="flex flex-row gap-4 items-center justify-center wrap">
+    <section id="home" class="min-w-md">
+        <div class="flex flex-row flex-wrap gap-4 items-center justify-center wrap">
             <!-- AVATAR -->
             <img class="avatar max-w-3xs rounded-full" :src="avatar" alt="Avatar">
 
