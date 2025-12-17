@@ -102,7 +102,7 @@
 
     .card-link {
         width: 350px;
-        min-height: 350px;
+        min-height: 400px;
         display: flex;
         flex-direction: column;
         color: var(--color-primary);
