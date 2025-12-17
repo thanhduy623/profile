@@ -11,11 +11,11 @@ export default {
         { name: "Vue.JS", point: 90, description: "Expert", img: createUrl("vuedotjs") },
         { name: "Spring boot", point: 80, description: "Proficient", img: createUrl("spring") },
         { name: "App script", point: 80, description: "Proficient", img: createUrl("googleappsscript") },
-        { name: "C++", point: 60, description: "Basic", img: createUrl("c") },
+        { name: "C++", point: 65, description: "Background", img: createUrl("c") },
         { name: "Supabase", point: 75, description: "Core", img: createUrl("supabase") },
         { name: "Firebase", point: 70, description: "Proficient", img: createUrl("firebase") },
-        { name: "Postgre", point: 65, description: "Basic", img: createUrl("postgresql") },
-        { name: "Android studio", point: 65, description: "Beginner", img: createUrl("androidstudio") },
-        { name: "n8n", point: 65, description: "Learning", img: createUrl("n8n") },
+        { name: "Postgre", point: 65, description: "Background", img: createUrl("postgresql") },
+        { name: "Android studio", point: 65, description: "Background", img: createUrl("androidstudio") },
+        { name: "n8n", point: 70, description: "Learning", img: createUrl("n8n") },
     ]
 }

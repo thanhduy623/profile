@@ -1,12 +1,12 @@
 <template>
-    <section id="score" class="flex flex-col flex-1 gap-2 min-w-sm">
+    <section id="score" class="min-w-full md:min-w-md flex flex-col flex-1 gap-2">
         <!-- Title -->
         <h2 class="text-primary uppercase"> {{ $t('title.score') }} </h2>
 
         <!-- HỌC TẬP -->
         <h5 class="italic"> {{ $t('title.resultStudy') }} </h5>
         <div class="grid grid-cols-6 gap-1 w-full place-items-center flex-1">
-            <div v-for="(item, index) in resultStudy" :key="index" class="w-16 h-full px-1 py-5 bg-gray-100 rounded-full
+            <div v-for="(item, index) in resultStudy" :key="index" class="w-16 h-full max-h-sm px-1 py-5 bg-gray-100 rounded-full
            flex flex-col items-center justify-center text-center duration-300 hover:bg-sky-100 hover:-translate-y-1 ">
                 <p class="text-xs">GPA</p>
                 <p class="text-primary font-bold"> {{item.point}} </p>

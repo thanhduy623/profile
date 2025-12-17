@@ -1,9 +1,9 @@
 <template>
-    <div class="footer flex flex-row flex-wrap justify-center items-center gap-10 w-full bg-primary p-4">
-        <img class="max-w-30" :src="pathLogo" alt="">
+    <div id="footer" class="flex flex-row flex-wrap justify-center items-center gap-10 w-full bg-primary p-4">
+        <img class="max-w-30 flex-1" :src="pathLogo" alt="">
 
         <!-- THÔNG TIN LIÊN LẠC -->
-        <div class="flex flex-col flex-1 items-start self-start">
+        <div id="contact" class="min-w-xs flex flex-col flex-1 items-start self-start">
             <h5 class="text-white"> {{ $t('title.contact') }}</h5>
 
             <span class="text-white text-sm">
@@ -32,7 +32,7 @@
         </div>
 
         <!-- LỜI CẢM ƠN -->
-        <div class="flex flex-col flex-1 items-start self-start text-sm text-white italic">
+        <div class="min-w-xs flex flex-col flex-1 items-start self-start text-sm text-white italic">
             <h5 class="text-white"> {{ $t('title.thanks') }} </h5>
             <span> {{ $t('profile.letter') }} </span>
         </div>

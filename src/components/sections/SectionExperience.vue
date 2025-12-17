@@ -1,5 +1,5 @@
 <template>
-    <section id="experience" class="flex flex-col flex-3 gap-2">
+    <section id="experience" class="min-w-full md:min-w-md lg:min-w-lg flex flex-col flex-3 gap-2">
         <h2 class="text-primary uppercase"> {{ $t('title.experience') }} </h2>
         <div class="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-4">
             <!-- CARD EXP -->

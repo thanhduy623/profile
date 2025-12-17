@@ -1,5 +1,5 @@
 <template>
-    <section id="skill" class="flex flex-col flex-1 gap-4 min-w-sm">
+    <section id="skill" class="min-w-full md:min-w-md flex flex-col flex-1 gap-4">
         <h2 class="text-primary uppercase"> {{ $t('title.skill') }} </h2>
 
         <div class="w-full h-full">

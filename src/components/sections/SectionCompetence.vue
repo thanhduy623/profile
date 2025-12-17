@@ -1,5 +1,5 @@
 <template>
-    <section id="competence" class="w-full flex flex-col flex-2 gap-2 min-w-md">
+    <section id="competence" class="min-w-full md:min-w-md lg:min-w-lg flex flex-col flex-2 gap-2">
         <!-- COMPETENCE -->
         <h2 class="text-primary uppercase"> {{ $t('title.competence') }} </h2>
         <p> {{ $t('profile.introduction1') }} </p>
