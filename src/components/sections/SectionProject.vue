@@ -10,7 +10,7 @@
                     <a :href="card.link" target="_blank" class="card-link flex flex-col gap-1">
                         <img :src="card.img" class="card-image" />
                         <h3 class="card-title">{{ card.name }}</h3>
-                        <div class="flex flex-row gap-1">
+                        <div class="flex flex-row flex-wrap gap-1">
                             <span v-for="(technology, index) in card.technology" :key="index" class="badge">{{
                                 technology }}</span>
                         </div>
@@ -102,7 +102,7 @@
 
     .card-link {
         width: 350px;
-        min-height: 400px;
+        min-height: 420px;
         display: flex;
         flex-direction: column;
         color: var(--color-primary);

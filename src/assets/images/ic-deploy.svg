@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 124 124" fill="none">
+  <!-- Viền tròn ngoài -->
+  <circle cx="62" cy="62" r="60" stroke="#000000" stroke-width="4" fill="none"/>
+  
+  <!-- Mũi tên hướng sang phải -->
+  <polygon points="50,45 50,79 84,62" fill="#000000"/>
+</svg>
