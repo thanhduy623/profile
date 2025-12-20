@@ -6,6 +6,7 @@
   <div v-if="!isLoading">
     <HeaderMain class="sticky top-0 z-999" />
     <SectionHome />
+
     <div class="flex flex-row flex-wrap gap-10 p-8 my-16">
       <SectionCompetence />
       <SectionExperience />
@@ -24,7 +25,7 @@
 </template>
 
 <script setup>
-  import { ref, onMounted } from 'vue'
+  import { ref } from 'vue'
   import IntroLoading from '@/components/intro/IntroLoading.vue'
   import HeaderMain from '@/components/headers/HeaderMain.vue'
   import FooterMain from '@/components/footers/FooterMain.vue'
@@ -41,21 +42,11 @@
 
   const finishLoading = () => {
     isLoading.value = false
-    // Sau khi ẩn loading mới kích hoạt auto scroll nếu cần
     setupAutoScroll()
   }
-
-  onMounted(() => {
-    // Option 1: Tự động tắt sau khi load xong mọi tài nguyên (ảnh, style...)
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-      }, 2000)
-    })
-  })
 </script>
 
 <style>
-  /* Hiệu ứng chuyển cảnh mượt mà khi ẩn Intro */
   .fade-leave-active {
     transition: opacity 1s ease;
   }

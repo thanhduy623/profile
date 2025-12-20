@@ -7,7 +7,6 @@
                 <span>{{ typingText }}</span><span class="cursor">|</span>
             </div>
             <h1 class="name-glitch">#ThanhDuy</h1>
-            <button class="enter-btn" @click="$emit('close')">Khám phá ngay</button>
         </div>
     </div>
 </template>
@@ -18,10 +17,9 @@
     const emit = defineEmits(['close'])
     const snowCanvas = ref(null)
     const typingText = ref('')
-    const fullText = "WELCOME MY PROFILE"
+    const fullText = 'WELCOME MY PROFILE'
     let animationFrameId = null
 
-    // Logic Đánh chữ
     const typeWriter = () => {
         let charIndex = 0
         const timer = setInterval(() => {
@@ -30,15 +28,20 @@
                 charIndex++
             } else {
                 clearInterval(timer)
+
+                // Tự động ẩn intro sau khi đánh chữ xong
+                setTimeout(() => {
+                    emit('close')
+                }, 1500)
             }
         }, 100)
     }
 
-    // Logic Tuyết rơi
     const initSnow = () => {
         const canvas = snowCanvas.value
         const ctx = canvas.getContext('2d')
-        let width, height, snowflakes = []
+        let width, height
+        const snowflakes = []
 
         const updateSize = () => {
             width = canvas.width = window.innerWidth
@@ -46,20 +49,25 @@
         }
 
         class Snowflake {
-            constructor() { this.reset() }
+            constructor() {
+                this.reset()
+            }
             reset() {
                 this.x = Math.random() * width
                 this.y = Math.random() * height
                 this.size = Math.random() * 3 + 1
                 this.speedY = Math.random() * 1 + 0.5
                 this.speedX = Math.random() * 0.5 - 0.25
-                this.color = Math.random() > 0.5 ? "#ffffff" : "#38bdf8"
+                this.color = Math.random() > 0.5 ? '#ffffff' : '#38bdf8'
                 this.opacity = Math.random() * 0.8 + 0.2
             }
             update() {
                 this.y += this.speedY
                 this.x += this.speedX
-                if (this.y > height) { this.y = -10; this.x = Math.random() * width }
+                if (this.y > height) {
+                    this.y = -10
+                    this.x = Math.random() * width
+                }
             }
             draw() {
                 ctx.beginPath()
@@ -73,7 +81,9 @@
         updateSize()
         window.addEventListener('resize', updateSize)
 
-        for (let i = 0; i < 150; i++) snowflakes.push(new Snowflake())
+        for (let i = 0; i < 150; i++) {
+            snowflakes.push(new Snowflake())
+        }
 
         const animate = () => {
             ctx.clearRect(0, 0, width, height)
@@ -83,6 +93,7 @@
             })
             animationFrameId = requestAnimationFrame(animate)
         }
+
         animate()
     }
 
@@ -99,10 +110,7 @@
 <style scoped>
     .intro-overlay {
         position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+        inset: 0;
         background: radial-gradient(circle at center, #072a6d 0%, #021182 100%);
         display: flex;
         justify-content: center;
@@ -114,8 +122,7 @@
 
     #snow-canvas {
         position: absolute;
-        top: 0;
-        left: 0;
+        inset: 0;
         width: 100%;
         height: 100%;
         pointer-events: none;
@@ -140,27 +147,6 @@
         font-weight: 800;
         color: #ffffff;
         text-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
-        margin-bottom: 30px;
-    }
-
-    .enter-btn {
-        padding: 12px 35px;
-        background: transparent;
-        color: #ffffff;
-        border: 2px solid #38bdf8;
-        border-radius: 50px;
-        cursor: pointer;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        transition: all 0.3s ease;
-    }
-
-    .enter-btn:hover {
-        background: #38bdf8;
-        color: #021182;
-        box-shadow: 0 0 30px rgba(56, 189, 248, 0.6);
-        transform: translateY(-3px);
     }
 
     .cursor {
