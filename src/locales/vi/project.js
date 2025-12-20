@@ -5,7 +5,9 @@ import thumnailProject04 from '@/assets/images/thumnail-project-04.png';
 import thumnailProject05 from '@/assets/images/thumnail-project-05.png';
 import thumnailProject06 from '@/assets/images/thumnail-project-06.png';
 import thumnailProject07 from '@/assets/images/thumnail-project-07.png';
-
+import thumnailProject08 from '@/assets/images/thumnail-project-08.png';
+import thumnailProject09 from '@/assets/images/thumnail-project-09.png';
+import thumnailProject10 from '@/assets/images/thumnail-project-10.png';
 
 export default {
     projectList: [
@@ -45,6 +47,34 @@ export default {
             link: "https://github.com/thanhduy623/Mobile-midterm",
             description: "Công cụ hỗ quản lý tín chỉ cho phòng Đại học và theo dõi tín chỉ tích dành cho sinh viên đang học tập tại TDTU."
         },
+        {
+            name: 'Spring Commerce',
+            status: "Completed",
+            img: thumnailProject08,
+            tag: ["FE", "BE", "DB", "BA"],
+            technology: ["Spring", "Thymeleaf", "Firebase"],
+            link: "https://github.com/thanhduy623/Java-midterm",
+            description: "SpringCommerce là một ứng dụng mua sắm trực tuyến đơn giản được xây dựng với Spring Boot, Firebase và Spring Security. Mục tiêu là tạo ra một MVP với các chức năng cơ bản như tìm kiếm sản phẩm, quản lý giỏ hàng và đặt hàng."
+        },
+        {
+            name: 'Cửa hàng di động',
+            status: "Completed",
+            img: thumnailProject09,
+            tag: ["FE", "BE", "DB", "BA"],
+            technology: ["PHP", "HTML", "CSS", "JS"],
+            link: "https://github.com/thanhduy623/MobileStore",
+            description: "Dự án này là một ứng dụng web Point of Sale (POS) được phát triển cho cửa hàng bán lẻ điện thoại và phụ kiện. Hệ thống được thiết kế chỉ phục vụ cho mục đích sử dụng nội bộ, dành cho quản trị viên cửa hàng và nhân viên bán hàng, không dành cho khách hàng."
+        },
+        {
+            name: 'Cửa hàng máy tính',
+            status: "Completed",
+            img: thumnailProject10,
+            tag: ["FE", "DB", "BA"],
+            technology: ["Futter", "Firebase"],
+            link: "https://github.com/thanhduy623/pc-store",
+            description: "Dự án là một ứng dụng được phát triển với mục tiêu hỗ trợ quản lý và vận hành hoạt động kinh doanh cửa hàng máy tính. Bên cạnh đó hỗ trợ khách hàng mua sắm sản phẩm trên đa nền tảng."
+        },
+        // BASIC
         {
             img: thumnailProject04,
             name: 'Trang thông tin cá nhân',
