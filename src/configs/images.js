@@ -1,5 +1,5 @@
 import avatar from '@/assets/images/avatar.jpg';
-import logo from '@/assets/images/logo.jpg';
+import logo from '@/assets/images/logo.png';
 import banner01 from '@/assets/images/banner-01.gif';
 import banner02 from '@/assets/images/banner-02.jpg';
 import burgerMenu from '@/assets/images/ic-burger-menu.svg';
