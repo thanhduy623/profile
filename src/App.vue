@@ -15,7 +15,7 @@
     <SectionProject class="p-8 my-16" />
 
     <div class="flex flex-row flex-wrap gap-10 p-8 items-stretch my-16">
-      <SectionScore />
+      <SectionStudy />
       <SectionSkill />
       <SectionOrganization />
     </div>
@@ -34,7 +34,7 @@
   import SectionExperience from '@/components/sections/SectionExperience.vue'
   import SectionProject from '@/components/sections/SectionProject.vue'
   import SectionSkill from '@/components/sections/SectionSkill.vue'
-  import SectionScore from '@/components/sections/SectionScore.vue'
+  import SectionStudy from '@/components/sections/SectionStudy.vue'
   import SectionOrganization from '@/components/sections/SectionOrganization.vue'
   import { setupAutoScroll } from './utils/autoScroll'
 
