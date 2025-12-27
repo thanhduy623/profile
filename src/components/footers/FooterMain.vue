@@ -42,7 +42,7 @@
 <script setup>
     import { pathLogo } from '@/configs/images'
 
-    const phone = "(+84) 834828525";
+    const phone = "(+84) 834 828 525";
     const email = "nguyenduy.6203@gmail.com";
     const address = "19 Nguyen Huu Tho, Tan Hung, HCMC";
     const pathZalo = "https://zalo.me/0834828525";

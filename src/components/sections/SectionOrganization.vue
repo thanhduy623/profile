@@ -3,14 +3,12 @@
         <h2 class="text-primary uppercase"> {{ $t('title.organization') }} </h2>
 
         <div class="organization-list flex flex-col gap-2">
-            <a v-for="(org, index) in organizationList" :key="index"
-                href="https://drive.google.com/drive/folders/1nqSHcDC2A6GDFjqZxkGSackrjQMmM-BZ?usp=sharing"
-                target="_blank"
+            <div v-for="(org, index) in organizationList" :key="index"
                 class="block flex flex-col bg-gray-100 border-l-2 border-primary p-2 transition-all duration-300 ease-in-out hover:shadow-xl hover:bg-sky-100">
                 <p class="text-xs italic">{{ org.time }}</p>
                 <h5 class="text-primary uppercase">{{ org.name }}</h5>
                 <p class="text-xs text-gray-600">{{ org.description }}</p>
-            </a>
+            </div>
         </div>
 
         <SectionAchievement />
