@@ -76,15 +76,6 @@ export default {
         },
         // BASIC
         {
-            img: thumnailProject04,
-            name: 'Trang thông tin cá nhân',
-            status: "Completed",
-            tag: ["FE", "DB"],
-            technology: ["Vue3", "Vite", "TaiwinCSS"],
-            link: "https://thanhduy623.github.io/profile/",
-            description: "Trang thông tin cá nhân cơ bản, trình bày tổng quan về năng lực, kinh nghiệm và các phương thức liên lạc của chủ sở hữu."
-        },
-        {
             name: 'Cổng thông tin nội bộ',
             status: "Completed",
             img: thumnailProject05,
@@ -92,15 +83,6 @@ export default {
             technology: ["Vue3", "GAS", "G.Sheet"],
             link: "https://thanhduy623.github.io/cbsvkt2-portal/",
             description: "Hệ thống quản lý công tác Đảng và sinh hoạt nội bộ cho Chi bộ Sinh viên khối Kỹ thuật 2, hỗ trợ tổ chức và theo dõi các hoạt động thường kỳ."
-        },
-        {
-            name: 'Mùa hè xanh 2025 - TDTU',
-            status: "Completed",
-            img: thumnailProject06,
-            tag: ["FE", "BE"],
-            technology: ["HTML", "GAS", "G.Sheet"],
-            link: "https://thanhduy623.github.io/MHX25/",
-            description: "Công cụ hỗ trợ truyền thông, điểm danh, liên lạc và kết nối giữa Ban Chỉ huy và các chiến sĩ tình nguyện của chiến dịch Mùa hè xanh khoa CNTT."
         },
     ]
 }

@@ -76,15 +76,6 @@ export default {
         },
         // BASIC
         {
-            img: thumnailProject04,
-            name: 'Personal Information Page',
-            status: "Completed",
-            tag: ["FE", "DB"],
-            technology: ["Vue3", "Vite", "TaiwinCSS"],
-            link: "https://thanhduy623.github.io/profile/",
-            description: "A basic personal information page presenting an overview of skills, experience, and contact methods of the owner."
-        },
-        {
             name: 'Internal Information Portal',
             status: "Completed",
             img: thumnailProject05,
@@ -92,15 +83,6 @@ export default {
             technology: ["Vue3", "GAS", "G.Sheet"],
             link: "https://thanhduy623.github.io/cbsvkt2-portal/",
             description: "A system for managing Party activities and internal affairs for the Student Party Cell of Engineering Block 2, supporting the organization and tracking of regular activities."
-        },
-        {
-            name: 'Green Summer Campaign 2025 - TDTU',
-            status: "Completed",
-            img: thumnailProject06,
-            tag: ["FE", "BE"],
-            technology: ["HTML", "GAS", "G.Sheet"],
-            link: "https://thanhduy623.github.io/MHX25/",
-            description: "A tool that supports communication, attendance tracking, contact, and connection between the Command Board and volunteer soldiers of the Green Summer Campaign of the IT Faculty."
         },
     ]
 }
