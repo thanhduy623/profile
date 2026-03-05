@@ -13,12 +13,12 @@ export default {
     projectList: [
         {
             name: 'Cửa hàng HMK',
-            status: "Processing",
+            status: "Completed",
             img: thumnailProject01,
             tag: ["FE", "BE", "DB", "BA"],
-            technology: ["Spring", "Vue3", "Eruka", "RabbitMQ"],
-            link: "",
-            description: "Dự án xây dựng hệ thống thương mại điện tử cho HMK Eyewear, nhằm mở rộng khả năng kinh doanh và quản lý bán hàng trực tuyến của doanh nghiệp."
+            technology: ["AWS", "Spring", "Vue3", "RabbitMQ", "Redis"],
+            link: "https://github.com/RekKi272/Scalable-E-Commerce-System",
+            description: "Dự án xây dựng hệ thống thương mại điện tử triển khai trên AWS với kiến trúc microservice, hỗ trợ bán hàng trực tuyến và tự động mở rộng bằng auto-scaling, load-balancing."
         },
         {
             name: 'Chatbot agent VASchool',
