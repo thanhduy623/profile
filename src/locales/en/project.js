@@ -13,12 +13,12 @@ export default {
     projectList: [
         {
             name: 'HMK Store',
-            status: "Processing",
+            status: "Completed",
             img: thumnailProject01,
             tag: ["FE", "BE", "DB", "BA"],
-            technology: ["Spring", "Vue3", "Eruka", "RabbitMQ"],
-            link: "",
-            description: "A project to build an e-commerce system for HMK Eyewear, aiming to expand the company’s business capabilities and online sales management."
+            technology: ["AWS", "Spring", "Vue3", "RabbitMQ", "Redis"],
+            link: "https://github.com/RekKi272/Scalable-E-Commerce-System",
+            description: "The project builds an e-commerce system deployed on AWS using a microservices architecture, supporting online sales with automatic scaling through auto-scaling and load balancing."
         },
         {
             name: 'VASchool Chatbot Agent',
