@@ -1,22 +1,32 @@
-import common from './common'
-import profile from './profile'
-import title from './title'
+import header from './header'
+import footer from './footer'
+
+import introduction from './introduction'
+import competence from './competence'
 import experience from './experience'
-import skill from './skill'
+
 import project from './project'
-import organization from './organization'
-import education from './education'
+
+import process from './process'
+import work from './work'
+
+import skill from './skill'
 import achievement from './achievement'
 
 
 export default {
-    common,
-    profile,
-    title,
+    header,
+    footer,
+
+    introduction,
+    competence,
     experience,
-    skill,
+
     project,
-    organization,
-    education,
+
+    process,
+    work,
+    
+    skill,
     achievement,
 }

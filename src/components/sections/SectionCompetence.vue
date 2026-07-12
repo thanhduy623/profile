@@ -1,17 +1,13 @@
 <template>
-    <section id="competence" class="min-w-full md:min-w-md lg:min-w-lg flex flex-col flex-2 gap-2">
+    <section 
+        id="competence" 
+        class="w-full flex flex-col gap-4 p-6 my-3"
+        >
         <!-- COMPETENCE -->
-        <h2 class="text-primary uppercase"> {{ $t('title.competence') }} </h2>
-        <p> {{ $t('profile.introduction1') }} </p>
-        <p> {{ $t('profile.introduction2') }} </p>
-        <p> {{ $t('profile.introduction3') }} </p>
-        <p> {{ $t('profile.introduction4') }} </p>
+        <h2 class="text-primary uppercase font-bold"> {{ $t('competence.titleSection') }} </h2>
+        <p> {{ $t('competence.introduction1') }} </p>
+        <p> {{ $t('competence.introduction2') }} </p>
+        <p> {{ $t('competence.introduction3') }} </p>
+        <p> {{ $t('competence.introduction4') }} </p>
     </section>
 </template>
-
-
-<script setup>
-    import { useLocalizedData } from '@/utils/useLocalizedData'
-
-    const { currentLang, localizedData, toggleLanguage } = useLocalizedData('experience.experienceList')
-</script>

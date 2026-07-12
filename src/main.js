@@ -8,15 +8,16 @@ import './style.css'
 import { createI18n } from 'vue-i18n'
 import vi from '@/locales/vi'
 import en from '@/locales/en'
+import zh from '@/locales/zh'
 
-const i18n = createI18n({
-    legacy: false,
-    locale: 'vi',
-    fallbackLocale: 'en',
-    messages: {
-        vi,
-        en
-    }
+const app = createApp(App);
+
+const i18n = createI18n({ 
+    legacy: false, 
+    locale: 'vi', 
+    fallbackLocale: 'en', 
+    messages: { vi, en, zh } 
 })
 
-createApp(App).use(i18n).mount('#app')
+app.use(i18n)
+app.mount('#app')

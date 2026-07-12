@@ -9,5 +9,10 @@ export const languages = [
         code: 'en',
         label: 'English',
         flag: 'https://countries-flag-pi.vercel.app/us.svg'
+    },
+    {
+        code: 'zh',
+        label: 'Chinese',
+        flag: 'https://countries-flag-pi.vercel.app/cn.svg'
     }
 ]

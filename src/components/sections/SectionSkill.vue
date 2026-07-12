@@ -1,84 +1,106 @@
 <template>
-    <section id="skill" class="min-w-full md:min-w-md flex flex-col flex-1 gap-4">
-        <h2 class="text-primary uppercase"> {{ $t('title.skill') }} </h2>
+    <section
+        id="skill"
+        class="w-full flex flex-col gap-4 p-6 my-3"
+    >
+        <h2 class="text-primary uppercase">
+            {{ $t('skill.titleSection') }}
+        </h2>
 
-        <div class="w-full h-full">
-            <RadarChart :chartData="radarChartData" :chartOptions="radarChartOptions" />
+        <div class="w-full h-[350px] md:h-[500px]">
+            <RadarChart
+                :chartData="radarChartData"
+                :chartOptions="radarChartOptions"
+            />
         </div>
     </section>
 </template>
 
 <script setup>
-    import { ref, computed } from 'vue';
-    import { useLocalizedData } from '@/utils/useLocalizedData'
-    import RadarChart from '@/components/charts/RadarChart.vue';
+import { computed } from 'vue'
+import { useLocalizedData } from '@/utils/useLocalizedData'
+import RadarChart from '@/components/charts/RadarChart.vue'
 
-    const { currentLang, localizedData: skillList, toggleLanguage } = useLocalizedData('skill.skillList')
+const { localizedData: skillList } = useLocalizedData('skill.skillList')
 
-    const rootStyles = getComputedStyle(document.documentElement)
-    const colorPrimary = rootStyles.getPropertyValue('--color-primary').trim()
-    const colorSecondary = rootStyles.getPropertyValue('--color-secondary').trim()
+const rootStyles = getComputedStyle(document.documentElement)
 
-    // 1. Chuẩn bị dữ liệu cho biểu đồ radar
-    const radarChartData = computed(() => {
-        const list = Array.isArray(skillList.value)
-            ? skillList.value
-            : Object.values(skillList.value || {})
+const colorPrimary =
+    rootStyles.getPropertyValue('--color-primary').trim()
 
-        const labels = list.map(item => item.name)
-        const dataPoints = list.map(item => item.point)
+const colorSecondary =
+    rootStyles.getPropertyValue('--color-secondary').trim()
 
-        return {
-            labels,
-            datasets: [
-                {
-                    data: dataPoints,
-                    backgroundColor: 'rgba(37, 150, 190, 0.2)',
-                    borderColor: colorPrimary,
-                    pointBackgroundColor: colorPrimary,
-                    pointBorderColor: colorPrimary,
-                    pointHoverBackgroundColor: '#ffffff',
-                    pointHoverBorderColor: colorPrimary,
-                    borderWidth: 2,
-                    fill: true,
-                }
-            ]
-        }
-    })
+const radarChartData = computed(() => {
+    const list = Array.isArray(skillList.value)
+        ? skillList.value
+        : Object.values(skillList.value || {})
 
-    // 2. Cấu hình tùy chọn cho biểu đồ radar
-    const radarChartOptions = ref({
-        responsive: true,
-        maintainAspectRatio: false, // Quan trọng để kiểm soát kích thước bằng CSS
-        scales: {
-            r: {
-                angleLines: {
-                    display: true
-                },
-                suggestedMin: 3, // Giá trị nhỏ nhất
-                suggestedMax: 10, // Giá trị lớn nhất (Max point5)
-                ticks: {
-                    stepSize: 1, // Khoảng cách giữa các bước
-                    backdropColor: 'transparent',
-                    color: 'transparent', // Màu chữ các giá trị trục
-                },
-                pointLabels: { // Cấu hình nhãn (tên kỹ năng)
-                    font: {
-                        size: 14,
-                        weight: 'bold'
-                    },
-                    color: 'rgb(31 41 55)',
-                }
+    return {
+        labels: list.map(item => item.name),
+        datasets: [
+            {
+                data: list.map(item => item.point),
+                backgroundColor: `${colorSecondary}33`,
+                borderColor: colorPrimary,
+                pointBackgroundColor: colorPrimary,
+                pointBorderColor: colorPrimary,
+                pointHoverBackgroundColor: '#ffffff',
+                pointHoverBorderColor: colorPrimary,
+                borderWidth: 2,
+                fill: true
             }
-        },
-        plugins: {
-            legend: {
-                display: false,
-                position: 'top',
+        ]
+    }
+})
+
+const radarChartOptions = computed(() => ({
+    responsive: true,
+    maintainAspectRatio: false,
+
+    scales: {
+        r: {
+            beginAtZero: true,
+            min: 0,
+            max: 10,
+
+            angleLines: {
+                color: '#d1d5db'
             },
-            tooltip: {
-                enabled: true
+
+            grid: {
+                color: '#d1d5db'
+            },
+
+            ticks: {
+                stepSize: 2,
+                backdropColor: 'transparent',
+                color: '#9ca3af'
+            },
+
+            pointLabels: {
+                color: '#374151',
+                font: {
+                    size: window.innerWidth < 768 ? 11 : 14,
+                    weight: 'bold'
+                }
             }
         }
-    });
+    },
+
+    plugins: {
+        legend: {
+            display: false
+        },
+
+        tooltip: {
+            enabled: true,
+            callbacks: {
+                label(context) {
+                    return `${context.raw}/10`
+                }
+            }
+        }
+    }
+}))
 </script>

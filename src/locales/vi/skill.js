@@ -1,11 +1,14 @@
 export default {
+    titleSection: "Kỹ năng mềm",
+    
     skillList: [
-        { name: 'Làm việc nhóm ', point: 9 },
-        { name: 'Tự học', point: 8 },
-        { name: 'Văn phòng', point: 9 },
-        { name: 'Lập kế hoạch', point: 8 },
-        { name: 'Giao tiếp', point: 8 },
-        { name: 'Trách nhiệm', point: 9 },
-        { name: 'Thích nghi', point: 8 },
+        { name: 'Giao tiếp', point: 9 },
+        { name: 'Làm nhóm', point: 9 },
+        { name: 'Tư duy', point: 8 },
+        { name: 'Giải quyết', point: 9 },
+        { name: 'Quản lý', point: 8 },
+        { name: 'Phân tích', point: 8 },
+        { name: 'Trách nhiệm', point: 10 },
+        { name: 'Văn phòng', point: 8 }
     ]
 }

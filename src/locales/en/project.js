@@ -1,88 +1,165 @@
-import thumnailProject01 from '@/assets/images/thumnail-project-01.png';
-import thumnailProject02 from '@/assets/images/thumnail-project-02.png';
-import thumnailProject03 from '@/assets/images/thumnail-project-03.png';
-import thumnailProject04 from '@/assets/images/thumnail-project-04.png';
-import thumnailProject05 from '@/assets/images/thumnail-project-05.png';
-import thumnailProject06 from '@/assets/images/thumnail-project-06.png';
-import thumnailProject07 from '@/assets/images/thumnail-project-07.png';
-import thumnailProject08 from '@/assets/images/thumnail-project-08.png';
-import thumnailProject09 from '@/assets/images/thumnail-project-09.png';
-import thumnailProject10 from '@/assets/images/thumnail-project-10.png';
+// src/locales/en/project.js
 
 export default {
-    projectList: [
-        {
-            name: 'HMK Store',
-            status: "Completed",
-            img: thumnailProject01,
-            tag: ["FE", "BE", "DB", "BA"],
-            technology: ["AWS", "Spring", "Vue3", "RabbitMQ", "Redis"],
-            link: "https://github.com/RekKi272/Scalable-E-Commerce-System",
-            description: "The project builds an e-commerce system deployed on AWS using a microservices architecture, supporting online sales with automatic scaling through auto-scaling and load balancing."
+    titleSection: 'Featured Projects',
+
+    clickToSeeDetail:
+        'Click here to see details',
+
+
+    items: {
+
+        'material-supply-system': {
+
+            name:
+                'EVN Material Supply System',
+
+            summary:
+                'A comprehensive material supply chain management system that optimizes inventory circulation processes, automates internal procurement approval workflows, and provides real-time tracking of warehouse import and export histories.',
+
+            details: [
+                'Responsible for gathering business requirements and creating detailed Software Requirements Specification (SRS) documents. Analyzed and modeled complex business workflows using Use Case Diagrams, Activity Diagrams, and Sequence Diagrams to ensure accurate understanding of supply chain operations.',
+
+                'Designed high-fidelity user interfaces for warehouse management and procurement approval modules. Developed a consistent UI component system to improve operational efficiency, simplify data entry processes, and minimize user errors.',
+
+                'Designed optimized relational database models using ERD diagrams covering material catalogs, suppliers, and inventory transactions. Applied database normalization, enforced data integrity constraints, and developed advanced SQL queries for reporting purposes.'
+            ]
+
         },
-        {
-            name: 'VASchool Chatbot Agent',
-            status: "Completed",
-            img: thumnailProject02,
-            tag: ["FE", "BE", "DB", "BA"],
-            technology: ["Vue3", "Supabase", "n8n"],
-            link: "https://fe-job-center.vercel.app/",
-            description: "An administration system and automated chatbot to support recruitment for Viet Anh School, helping to automate Q&A processes and candidate management."
+
+
+        'hmk-store': {
+
+            name:
+                'HMK Eyewear System',
+
+            summary:
+                'A microservices-based e-commerce platform developed with Spring Boot, containerized using Docker, and deployed on AWS cloud infrastructure with caching mechanisms, event-driven messaging, and automatic resource scaling.',
+
+            details: [
+                'Designed the system based on Microservices architecture by separating core services into independent modules for better scalability and maintainability. Developed backend services with Spring Boot following RESTful API principles and JWT-based authentication mechanisms.',
+
+                'Integrated RabbitMQ for event-driven asynchronous communication to process shopping cart events and automated email notifications. Combined Firebase database services with Redis caching to improve API response performance.',
+
+                'Containerized all services using Docker and deployed them on AWS cloud infrastructure. Configured Application Load Balancer and Auto Scaling Group to dynamically adjust computing resources according to system workload.'
+            ]
+
         },
-        {
-            name: 'Online Banking',
-            status: "Completed",
-            img: thumnailProject03,
-            tag: ["FE", "BE", "DB", "BA"],
-            technology: ["Java", "Firebase", "XML Layout", "API-RESTful", "VNPay"],
-            link: "https://github.com/thanhduy623/mobile-final",
-            description: "An application for online banking transactions, enabling customers to perform financial operations quickly and securely."
+
+
+        'vaschool-chatbot': {
+
+            name:
+                'VASchool Recruitment Chatbot',
+
+            summary:
+                'An AI-powered recruitment chatbot platform integrated with an administration system that automates recruitment workflows, candidate screening processes, and provides continuous 24/7 automated responses based on real organizational data.',
+
+            details: [
+                'Implemented a Multi-Agent architecture following the Coordinator-Specialist model. Built specialized agents responsible for school information retrieval, recruitment position search, and candidate CV screening workflows.',
+
+                'Developed a two-layer RAG architecture using vector search with Supabase PostgreSQL and pgvector extension. Applied 1536-dimensional embeddings combined with Cohere API reranking based on cosine similarity, achieving Precision@5 accuracy up to 87%.',
+
+                'Automated operational workflows using n8n, including knowledge base document management, CV evaluation scoring, and email notification orchestration. Enhanced security through role-based access control and Row-Level Security policies.'
+            ]
+
         },
-        {
-            name: 'Credit Management',
-            status: "Completed",
-            img: thumnailProject07,
-            tag: ["FE", "BE", "DB", "BA"],
-            technology: ["Android", "XML", "Firebase"],
-            link: "https://github.com/thanhduy623/Mobile-midterm",
-            description: "A tool that supports credit management for the university administration and tracks accumulated credits for students studying at TDTU."
+
+
+        'pc-store': {
+
+            name:
+                'Commerce System',
+
+            summary:
+                'A cross-platform e-commerce application combined with a comprehensive administration portal for computer hardware sales, supporting complex product configurations and real-time order synchronization through WebSocket.',
+
+            details: [
+                'Developed a complete dual-platform solution including a customer mobile shopping application and an internal administration portal. Designed a consistent user experience across multiple screen sizes using Flutter and Dart widget architecture.',
+
+                'Integrated Firebase services to manage complex product catalogs and high-resolution images. Developed real-time order status updates, transaction history tracking, and product review features through WebSocket communication.',
+
+                'Optimized product variant management workflows for complex computer hardware configurations. Applied comprehensive black-box testing across multiple devices to improve performance and ensure application stability.'
+            ]
+
         },
-        {
-            name: 'Spring Commerce',
-            status: "Completed",
-            img: thumnailProject08,
-            tag: ["FE", "BE", "DB", "BA"],
-            technology: ["Spring", "Thymeleaf", "Firebase"],
-            link: "https://github.com/thanhduy623/Java-midterm",
-            description: "SpringCommerce is a simple online shopping application built with Spring Boot, Firebase, and Spring Security. The goal is to create an MVP with basic features such as product search, cart management, and order placement."
+
+
+        'student-certificate-management': {
+
+            name:
+                'Student Credit Management System',
+
+            summary:
+                'A mobile application that digitizes the management, searching, and centralized storage of student course certificate data in real time while optimizing large-scale data processing and secure image compression.',
+
+            details: [
+                'Developed the application using a hybrid MVC and MBD architecture to improve source code organization and system maintainability. Integrated Firebase Cloud Firestore for real-time synchronization and offline data caching.',
+
+                'Implemented strict access control between administrators and academic staff. Developed advanced searching features with dynamic multi-condition filters and optimized large-scale CSV import and export processes.',
+
+                'Reduced storage requirements through image compression algorithms and Base64 image encoding before synchronization. Improved security through password encryption and Firestore Security Rules.'
+            ]
+
         },
-        {
-            name: 'Mobile Store',
-            status: "Completed",
-            img: thumnailProject09,
-            tag: ["FE", "BE", "DB", "BA"],
-            technology: ["PHP", "HTML", "CSS", "JS"],
-            link: "https://github.com/thanhduy623/MobileStore",
-            description: "This project is a web-based Point of Sale (POS) application developed for a mobile phone and accessories retail store. The system is designed for internal use only, intended for store administrators and sales staff, not for customers."
+
+
+        'online-banking': {
+
+            name:
+                'Online Banking System',
+
+            summary:
+                'A mobile banking application providing financial transaction services and lifestyle utilities integrated with biometric fingerprint authentication and secure VNPay online payment services.',
+
+            details: [
+                'Developed a native Android application using Java and XML Layout following Material Design principles. Integrated BiometricPrompt API to support secure fingerprint authentication for login and transaction approval.',
+
+                'Built a diverse service ecosystem by simulating third-party integrations through sandbox environments. Supported mobile top-ups, flight booking, movie ticket purchasing, and secure VNPay payment workflows.',
+
+                'Used Firebase Realtime Database as the central storage system with real-time account balance synchronization. Designed transaction workflows and optimized REST API endpoints to reduce conflicts under unstable network conditions.'
+            ]
+
         },
-        {
-            name: 'Computer Store',
-            status: "Completed",
-            img: thumnailProject10,
-            tag: ["FE", "DB", "BA"],
-            technology: ["Futter", "Firebase"],
-            link: "https://github.com/thanhduy623/pc-store",
-            description: "This project is an application developed to support the management and operation of a computer retail business, while also enabling customers to shop across multiple platforms."
+
+
+        'real-estate-brokerage': {
+
+            name:
+                'Real Estate Brokerage System',
+
+            summary:
+                'A web portal supporting real estate listing management, brokerage operations, and transaction workflows with advanced filtering algorithms and strict role-based security mechanisms.',
+
+            details: [
+                'Designed the system using a layered MVC architecture to separate presentation, business logic, and data access layers. Developed standardized RESTful APIs for asynchronous operations and approval workflows.',
+
+                'Implemented advanced filtering algorithms capable of processing multiple search conditions including transaction type, property category, area range, and price range. Integrated Spring Security for authentication and authorization management.',
+
+                'Applied black-box testing methodologies to cover successful and exceptional API scenarios. Optimized MySQL database structures to reduce response latency under high workloads.'
+            ]
+
         },
-        // BASIC
-        {
-            name: 'Internal Information Portal',
-            status: "Completed",
-            img: thumnailProject05,
-            tag: ["FE", "BE"],
-            technology: ["Vue3", "GAS", "G.Sheet"],
-            link: "https://thanhduy623.github.io/cbsvkt2-portal/",
-            description: "A system for managing Party activities and internal affairs for the Student Party Cell of Engineering Block 2, supporting the organization and tracking of regular activities."
-        },
-    ]
+
+
+        'internal-portal': {
+
+            name:
+                'Party Branch Information Portal',
+
+            summary:
+                'A web portal designed to digitize operational processes, manage supporting documents, and optimize administrative workflows for the Engineering Student Party Branch while minimizing infrastructure costs.',
+
+            details: [
+                'Designed and developed a Single Page Application using Vue 3 combined with Tailwind CSS to provide a smooth experience across desktop and mobile devices. Built a serverless backend solution by transforming Google Apps Script into a RESTful API service.',
+
+                'Used Google Sheets as the central database with real-time synchronization for member management and attendance tracking. Digitized document submission and verification processes to reduce manual paperwork by approximately 90%.',
+
+                'Optimized infrastructure costs to zero by leveraging free cloud services from Google and GitHub Pages. Developed dynamic frontend filtering mechanisms for fast member information retrieval and periodic report generation.'
+            ]
+
+        }
+
+    }
+
 }

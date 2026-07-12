@@ -1,29 +1,35 @@
-import logoParty from '@/assets/images/logo-party.png';
-import logoYouth from '@/assets/images/logo-youth.png';
-import logoEducation from '@/assets/images/logo-education.png';
-
 export default {
+    titleSection: "Achievements attained",
 
-    commonText: {
-        achive: 'Achieved',
-        content: ' certificates/awards from the organization '
-    },
+    items: {
+        party: {
+            achive: 'Achieved',
+            content: 'certificates and awards from',
+            organization: 'Party'
+        },
 
-    summaryList: [
-        {
-            logo: logoParty,
-            quanlity: '03',
-            organization: 'Party',
+        youth: {
+            achive: 'Achieved',
+            content: 'certificates and awards from',
+            organization: 'Youth Organization'
         },
-        {
-            logo: logoYouth,
-            quanlity: '08',
-            organization: 'Youth Organization',
+
+        education: {
+            achive: 'Achieved',
+            content: 'certificates and awards from',
+            organization: 'Education'
         },
-        {
-            logo: logoEducation,
-            quanlity: '01',
-            organization: 'Education',
+
+        certification: {
+            achive: 'Achieved',
+            content: 'certificates and awards from',
+            organization: 'Enterprise/company/center'
         },
-    ]
+
+        language: {
+            achive: 'Achieved',
+            content: 'foreign language certificate',
+            organization: 'International organization'
+        }
+    }
 }

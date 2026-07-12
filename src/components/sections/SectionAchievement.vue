@@ -1,26 +1,163 @@
 <template>
-    <section id="organization" class="min-w-full md:min-w-md flex flex-col flex-1 gap-2">
-        <h2 class="text-primary uppercase"> {{ $t('title.achievement') }} </h2>
-        <!-- GRID ORGANIZATION -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <a v-for="(item, index) in achievementList" :key="index"
-                href="https://drive.google.com/drive/folders/1nqSHcDC2A6GDFjqZxkGSackrjQMmM-BZ" target="_blank"
-                class="flex flex-col items-center p-1 rounded-lg bg-gray-100 hover:bg-sky-100">
-                <img class="max-h-12 mb-2" :src="item.logo" alt="">
-                <div class="flex flex-col items-center text-center">
-                    <p> {{ $t('achievement.commonText.achive') }}
-                        <strong class="text-primary"> {{ item.quanlity }} </strong>
-                    </p>
-                    <p class="text-xs"> {{ $t('achievement.commonText.content') }}
-                        <span> {{ item.organization }} </span>
-                    </p>
-                </div>
-            </a>
+    <section
+        id="achievement"
+        class="w-full flex flex-col gap-4 p-6 my-3"
+    >
+
+        <h2 class="text-primary uppercase">
+            {{ $t('achievement.titleSection') }}
+        </h2>
+
+
+        <div
+            class="grid grid-cols-3 gap-4"
+        >
+
+            <AchievementCard
+                v-for="item in achievementList"
+                :key="item.key"
+                :logo="item.logo"
+                :quantity="item.quantity"
+                :achive="item.achive"
+                :content="item.content"
+                :organization="item.organization"
+                @click="openPopup(item.key, item.organization)"
+            />
+
         </div>
+
+
+        <PopupAchievementComponent
+            v-model="popupVisible"
+            :title="popupTitle"
+            :type="popupType"
+        />
+
     </section>
 </template>
 
+
 <script setup>
-    import { useLocalizedData } from '@/utils/useLocalizedData'
-    const { currentLang, localizedData: achievementList, toggleLanguage } = useLocalizedData('achievement.summaryList')
+import { computed, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+
+import AchievementCard from '@/components/cards/AchievementCard.vue'
+import PopupAchievementComponent from '@/components/overlays/PopupAchievementComponent.vue'
+
+
+import {
+    logoParty,
+    logoYouth,
+    logoEducation,
+    logoCertification,
+    logoLanguage
+} from '@/data/images'
+
+
+const { t } = useI18n()
+
+
+
+// Load toàn bộ file achievement
+const achievementFiles = import.meta.glob(
+    '@/assets/images/achivements/*/*',
+    {
+        eager: true,
+        query: '?url',
+        import: 'default'
+    }
+)
+
+
+
+const getQuantity = key => {
+
+    return Object.keys(achievementFiles)
+        .filter(path =>
+            path.includes(`/achivements/${key}/`)
+        )
+        .length
+
+}
+
+
+
+const achievementList = computed(() => [
+
+    {
+        key: 'party',
+        logo: logoParty,
+        quantity: getQuantity('party'),
+
+        achive: t('achievement.items.party.achive'),
+        content: t('achievement.items.party.content'),
+        organization: t('achievement.items.party.organization')
+    },
+
+
+    {
+        key: 'youth',
+        logo: logoYouth,
+        quantity: getQuantity('youth'),
+
+        achive: t('achievement.items.youth.achive'),
+        content: t('achievement.items.youth.content'),
+        organization: t('achievement.items.youth.organization')
+    },
+
+
+    {
+        key: 'education',
+        logo: logoEducation,
+        quantity: getQuantity('education'),
+
+        achive: t('achievement.items.education.achive'),
+        content: t('achievement.items.education.content'),
+        organization: t('achievement.items.education.organization')
+    },
+
+
+    {
+        key: 'certification',
+        logo: logoCertification,
+        quantity: getQuantity('certification'),
+
+        achive: t('achievement.items.certification.achive'),
+        content: t('achievement.items.certification.content'),
+        organization: t('achievement.items.certification.organization')
+    },
+
+    {
+        key: 'language',
+        logo: logoLanguage,
+        quantity: getQuantity('language'),
+
+        achive: t('achievement.items.language.achive'),
+        content: t('achievement.items.language.content'),
+        organization: t('achievement.items.language.organization')
+    }
+
+])
+
+
+
+const popupVisible = ref(false)
+
+const popupType = ref('')
+
+const popupTitle = ref('')
+
+
+
+const openPopup = (key, title) => {
+
+    popupType.value = key
+
+    popupTitle.value = title
+
+    popupVisible.value = true
+
+}
+
 </script>

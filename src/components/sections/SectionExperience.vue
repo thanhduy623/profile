@@ -1,32 +1,40 @@
 <template>
-    <section id="experience" class="min-w-full md:min-w-md lg:min-w-lg flex flex-col flex-3 gap-2">
-        <h2 class="text-primary uppercase"> {{ $t('title.experience') }} </h2>
-        <div class="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-4">
-            <!-- CARD EXP -->
-            <div class="w-full grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-4">
-                <div v-for="item in localizedData" :key="item.name"
-                    class="flex flex-row gap-3 p-4 bg-gray-100 text-white rounded-xl shadow-xl border border-gray-300 transition-all duration-300 hover:scale-[1.02] hover:shadow-sky-500/40 cursor-pointer ">
+    <section
+        id="experience"
+        class="w-full flex flex-col gap-4 p-6 my-3"
+    >
+        <h2 class="text-primary uppercase font-bold">
+            {{ t('experience.titleSection') }}
+        </h2>
 
-                    <img class="max-w-8 min-w-8 h-8" :src=" item.img " :alt=" item.name ">
-
-                    <div class="w-full flex flex-col gap-1">
-                        <span class="uppercase text-sm font-semibold text-sky-400"> {{ item.name }} </span>
-
-                        <div class="w-full bg-gray-700 rounded-full h-1">
-                            <div class="bg-sky-500 h-1 rounded-full" :style="{ width: item.point + '%' }"></div>
-                        </div>
-
-                        <span class="text-xs text-gray-400 italic"> {{ item.description }} </span>
-                    </div>
-                </div>
-            </div>
+        <div
+            class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4"
+        >
+            <ExperienceCard
+                v-for="item in experienceList"
+                :key="item.id"
+                :name="item.name"
+                :description="item.description"
+                :point="item.point"
+                :img="item.img"
+            />
         </div>
     </section>
 </template>
 
-
 <script setup>
-    import { useLocalizedData } from '@/utils/useLocalizedData'
+import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 
-    const { currentLang, localizedData, toggleLanguage } = useLocalizedData('experience.experienceList')
+import { experiences } from '@/data/experiences'
+import ExperienceCard from '@/components/cards/ExperienceCard.vue'
+
+const { t } = useI18n()
+
+const experienceList = computed(() =>
+    experiences.map(item => ({
+        ...item,
+        description: t(`experience.level.${item.level}`)
+    }))
+)
 </script>

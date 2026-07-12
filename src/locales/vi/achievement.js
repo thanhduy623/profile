@@ -1,29 +1,35 @@
-import logoParty from '@/assets/images/logo-party.png';
-import logoYouth from '@/assets/images/logo-youth.png';
-import logoEducation from '@/assets/images/logo-education.png';
-
 export default {
+    titleSection: "Thành tích đạt được",
 
-    commonText: {
-        achive: 'Đạt',
-        content: ' giấy khen, chứng nhận từ tổ chức '
-    },
+    items: {
+        party: {
+            achive: 'Đạt',
+            content: 'giấy khen, chứng nhận từ tổ chức',
+            organization: 'Đảng'
+        },
 
-    summaryList: [
-        {
-            logo: logoParty,
-            quanlity: '03',
-            organization: 'Đảng',
+        youth: {
+            achive: 'Đạt',
+            content: 'giấy khen, chứng nhận từ tổ chức',
+            organization: 'Đoàn thể'
         },
-        {
-            logo: logoYouth,
-            quanlity: '08',
-            organization: 'Đoàn thể',
+
+        education: {
+            achive: 'Đạt',
+            content: 'giấy khen, chứng nhận từ tổ chức',
+            organization: 'Giáo dục'
         },
-        {
-            logo: logoEducation,
-            quanlity: '01',
-            organization: 'Giáo dục',
+
+        certification: {
+            achive: 'Đạt',
+            content: 'giấy khen, chứng nhận từ tổ chức',
+            organization: 'Doanh nghiệp/công ty/trung tâm'
         },
-    ]
+
+        language: {
+            achive: 'Đạt',
+            content: 'chứng chỉ ngoại ngữ của',
+            organization: 'Đơn vị quốc tế'
+        }
+    }
 }
