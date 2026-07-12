@@ -1,6 +1,6 @@
 <template>
     <section
-        id="organization"
+        id="process"
         class="w-full flex flex-col gap-4 p-6 my-3"
     >
         <h2 class="text-primary font-bold uppercase">

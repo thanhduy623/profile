@@ -2,11 +2,11 @@
 
 export default {
     profile: 'MY PROFILE',
-    home: 'HOME',
-    competence: 'COMPETENCE',
-    experience: 'EXPERIENCE',
-    project: 'PROJECT',
-    skill: 'SKILL',
-    organization: 'ORGANIZATION',
+
+    introduction: 'INTRODUCTION',
+    project: 'PROJECTS',
+    process: 'PROCESS',
+    work: 'WORK',
+    achievement: 'ACHIEVEMENTS',
     contact: 'CONTACT'
 }

@@ -4,32 +4,32 @@ export default {
     items: {
         party: {
             achive: 'Đạt',
-            content: 'giấy khen, chứng nhận từ tổ chức',
-            organization: 'Đảng'
+            content: 'giấy khen, chứng nhận từ',
+            organization: 'Tổ chức Đảng'
         },
 
         youth: {
             achive: 'Đạt',
-            content: 'giấy khen, chứng nhận từ tổ chức',
-            organization: 'Đoàn thể'
+            content: 'giấy khen, chứng nhận từ',
+            organization: 'Tổ chức Đoàn thể'
         },
 
         education: {
             achive: 'Đạt',
-            content: 'giấy khen, chứng nhận từ tổ chức',
-            organization: 'Giáo dục'
+            content: 'giấy khen, chứng nhận từ',
+            organization: 'Tổ chức Giáo dục'
         },
 
         certification: {
             achive: 'Đạt',
-            content: 'giấy khen, chứng nhận từ tổ chức',
-            organization: 'Doanh nghiệp/công ty/trung tâm'
+            content: 'chứng chỉ, chứng nhận từ',
+            organization: 'Trung tâm/Doanh nghiệp'
         },
 
         language: {
             achive: 'Đạt',
             content: 'chứng chỉ ngoại ngữ của',
-            organization: 'Đơn vị quốc tế'
+            organization: 'Hội đồng quốc tế'
         }
     }
 }

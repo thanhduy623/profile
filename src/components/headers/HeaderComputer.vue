@@ -41,12 +41,11 @@ import LanguageSwitch from '@/components/languages/LanguageSwitch.vue'
 const { t } = useI18n()
 
 const menus = [
-    { key: 'home', href: '#home' },
-    { key: 'competence', href: '#competence' },
-    { key: 'experience', href: '#experience' },
+    { key: 'introduction', href: '#introduction' },
     { key: 'project', href: '#project' },
-    { key: 'skill', href: '#skill' },
-    { key: 'organization', href: '#organization' },
+    { key: 'process', href: '#process' },
+    { key: 'work', href: '#work' },
+    { key: 'achievement', href: '#achievement' },
     { key: 'contact', href: '#contact' }
 ]
 </script>

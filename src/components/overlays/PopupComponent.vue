@@ -20,7 +20,7 @@
 
                 <!-- Popup -->
                 <div
-                    class="relative z-10 flex max-h-[90vh] w-full max-w-6xl flex-col overflow-hidden rounded-xl bg-white shadow-2xl"
+                    class="relative z-10 flex max-h-[85vh] w-full max-w-6xl flex-col overflow-hidden rounded-xl bg-white shadow-2xl"
                     @click.stop
                 >
                     <!-- Header -->

@@ -42,7 +42,7 @@
         >
             <div
                 v-if="isOpen"
-                class="border-t border-white/20 bg-primary"
+                class="fixed inset-x-0 top-16 bottom-0 z-50 border-t border-white/20 bg-primary"
             >
                 <nav class="flex flex-col">
                     <a
@@ -71,12 +71,11 @@ const { t } = useI18n()
 const isOpen = ref(false)
 
 const menus = [
-    { key: 'home', href: '#home' },
-    { key: 'competence', href: '#competence' },
-    { key: 'experience', href: '#experience' },
+    { key: 'introduction', href: '#introduction' },
     { key: 'project', href: '#project' },
-    { key: 'skill', href: '#skill' },
-    { key: 'organization', href: '#organization' },
+    { key: 'process', href: '#process' },
+    { key: 'work', href: '#work' },
+    { key: 'achievement', href: '#achievement' },
     { key: 'contact', href: '#contact' }
 ]
 </script>

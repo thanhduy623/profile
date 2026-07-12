@@ -1,6 +1,6 @@
 <template>
     <section
-        id="home"
+        id="introduction"
         class="w-full flex flex-col gap-4 p-6 mb-3"
         :style="{ background: `url(${pathBanner01}) no-repeat center / cover` }"
     >

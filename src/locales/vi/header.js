@@ -2,11 +2,11 @@
 
 export default {
     profile: 'HỒ SƠ CỦA TÔI',
-    home: 'TRANG CHỦ',
-    competence: 'NĂNG LỰC',
-    experience: 'KINH NGHIỆM',
+
+    introduction: 'GIỚI THIỆU',
     project: 'DỰ ÁN',
-    skill: 'KỸ NĂNG',
-    organization: 'TỔ CHỨC',
+    process: 'CÔNG TÁC',
+    work: 'LÀM VIỆC',
+    achievement: 'THÀNH TÍCH',
     contact: 'LIÊN HỆ'
 }

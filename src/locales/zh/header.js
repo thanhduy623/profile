@@ -1,12 +1,12 @@
 // src/locales/zh/header.js
 
 export default {
-    profile: '我的简历',
-    home: '首页',
-    competence: '专业能力',
-    experience: '经历',
+    profile: '我的档案',
+
+    introduction: '个人简介',
     project: '项目',
-    skill: '技能',
-    organization: '组织',
-    contact: '联系我'
+    process: '工作经历',
+    work: '工作',
+    achievement: '成就',
+    contact: '联系方式'
 }

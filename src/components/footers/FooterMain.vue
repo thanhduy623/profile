@@ -1,5 +1,8 @@
 <template>
-    <div id="footer" class="flex flex-row flex-wrap justify-center items-center gap-10 w-full bg-primary p-6">
+    <div 
+        id="footer" 
+        class="flex flex-row flex-wrap justify-center items-center gap-10 w-full bg-primary p-6">
+        
         <img class="max-w-30 flex-1 mr-10" :src="logo" alt="">
 
         <!-- THÔNG TIN LIÊN HỆ -->
@@ -27,28 +30,20 @@
                 {{ $t('footer.social') }}
             </h5>
 
-            <a
-                :href="pathZalo"
-                target="_blank"
-                class="text-white text-sm hover:underline"
-            >
-                <strong>Zalo:</strong> 0834828525
-            </a>
+            <div class="flex flex-row gap-1 text-white text-sm">
+                <strong>Zalo:</strong> 
+                <a :href="pathZalo" class="hover:underline"> {{ textZalo }} </a>
+            </div>
 
-            <a
-                :href="pathFacebook"
-                target="_blank"
-                class="text-white text-sm hover:underline"
-            >
-                <strong>Facebook:</strong> fb.com/PeeZee.6203
-            </a>
+            <div class="flex flex-row gap-1 text-white text-sm">
+                <strong>Facebook:</strong> 
+                <a :href="pathFacebook" class="hover:underline"> {{ textFacebook }} </a>
+            </div>
 
-            <a
-                :href="pathGmail"
-                class="text-white text-sm hover:underline"
-            >
-                <strong>Gmail:</strong>  nguyenduy.6203@gmail.com
-            </a>
+            <div class="flex flex-row gap-1 text-white text-sm">
+                <strong>Instagram:</strong> 
+                <a :href="pathInstagram" class="hover:underline"> {{ textInstagram }} </a>
+            </div>
         </div>
 
         <!-- LỜI CẢM ƠN -->
@@ -71,7 +66,11 @@ const phone = '(+84) 834 828 525'
 const email = 'nguyenduy.6203@gmail.com'
 const address = '19 Nguyen Huu Tho, Tan Hung, HCMC'
 
+const textZalo = '0834828525'
+const textFacebook = 'fb.com/PeeZee.6203'
+const textInstagram = 'instagram.com/td_6203'
+
 const pathZalo = 'https://zalo.me/0834828525'
 const pathFacebook = 'https://fb.com/PeeZee.6203'
-const pathGmail = `mailto:${email}`
+const pathInstagram = 'https://www.instagram.com/td_6203'
 </script>
