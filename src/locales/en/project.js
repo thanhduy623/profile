@@ -66,6 +66,24 @@ export default {
         },
 
 
+        'digital-business-card': {
+            name:
+                'Digital Business Card System',
+
+            summary:
+                'An NFC-enabled digital business card platform that allows users to share contact information with a single tap, manage online profiles, enhance networking experiences, and strengthen personal branding.',
+
+            details: [
+
+                'Developed on a Vue.js frontend architecture combined with Cloudflare Workers and Cloudflare D1, delivering fast response times, low latency, and global deployment capabilities. Integrated NFC technology enables users to share personal profiles, contact details, and social media links without requiring a mobile application.',
+
+                'Built a profile management system that allows users to update personal information, business details, and displayed content in real time. Designed secure authentication workflows featuring password management, administrative security codes, and access control mechanisms to protect user data.',
+
+                'Optimized user experience across both iOS and Android devices through NDEF-compliant NFC communication. Leveraged Cloudflare D1 for centralized data storage and Workers for edge processing, improving system scalability, data access performance, and service reliability under high traffic conditions.'
+            ]
+        },
+
+
         'pc-store': {
 
             name:
@@ -80,44 +98,6 @@ export default {
                 'Integrated Firebase services to manage complex product catalogs and high-resolution images. Developed real-time order status updates, transaction history tracking, and product review features through WebSocket communication.',
 
                 'Optimized product variant management workflows for complex computer hardware configurations. Applied comprehensive black-box testing across multiple devices to improve performance and ensure application stability.'
-            ]
-
-        },
-
-
-        'student-certificate-management': {
-
-            name:
-                'Student Credit Management System',
-
-            summary:
-                'A mobile application that digitizes the management, searching, and centralized storage of student course certificate data in real time while optimizing large-scale data processing and secure image compression.',
-
-            details: [
-                'Developed the application using a hybrid MVC and MBD architecture to improve source code organization and system maintainability. Integrated Firebase Cloud Firestore for real-time synchronization and offline data caching.',
-
-                'Implemented strict access control between administrators and academic staff. Developed advanced searching features with dynamic multi-condition filters and optimized large-scale CSV import and export processes.',
-
-                'Reduced storage requirements through image compression algorithms and Base64 image encoding before synchronization. Improved security through password encryption and Firestore Security Rules.'
-            ]
-
-        },
-
-
-        'online-banking': {
-
-            name:
-                'Online Banking System',
-
-            summary:
-                'A mobile banking application providing financial transaction services and lifestyle utilities integrated with biometric fingerprint authentication and secure VNPay online payment services.',
-
-            details: [
-                'Developed a native Android application using Java and XML Layout following Material Design principles. Integrated BiometricPrompt API to support secure fingerprint authentication for login and transaction approval.',
-
-                'Built a diverse service ecosystem by simulating third-party integrations through sandbox environments. Supported mobile top-ups, flight booking, movie ticket purchasing, and secure VNPay payment workflows.',
-
-                'Used Firebase Realtime Database as the central storage system with real-time account balance synchronization. Designed transaction workflows and optimized REST API endpoints to reduce conflicts under unstable network conditions.'
             ]
 
         },
@@ -158,7 +138,26 @@ export default {
                 'Optimized infrastructure costs to zero by leveraging free cloud services from Google and GitHub Pages. Developed dynamic frontend filtering mechanisms for fast member information retrieval and periodic report generation.'
             ]
 
-        }
+        },
+
+
+        'online-banking': {
+
+            name:
+                'Online Banking System',
+
+            summary:
+                'A mobile banking application providing financial transaction services and lifestyle utilities integrated with biometric fingerprint authentication and secure VNPay online payment services.',
+
+            details: [
+                'Developed a native Android application using Java and XML Layout following Material Design principles. Integrated BiometricPrompt API to support secure fingerprint authentication for login and transaction approval.',
+
+                'Built a diverse service ecosystem by simulating third-party integrations through sandbox environments. Supported mobile top-ups, flight booking, movie ticket purchasing, and secure VNPay payment workflows.',
+
+                'Used Firebase Realtime Database as the central storage system with real-time account balance synchronization. Designed transaction workflows and optimized REST API endpoints to reduce conflicts under unstable network conditions.'
+            ]
+
+        },
 
     }
 

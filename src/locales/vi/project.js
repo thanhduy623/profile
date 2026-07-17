@@ -68,6 +68,24 @@ export default {
         },
 
 
+        'digital-business-card': {
+            name:
+                'Hệ thống danh thiếp điện tử',
+
+            summary:
+                'Nền tảng danh thiếp điện tử tích hợp công nghệ NFC, cho phép chia sẻ thông tin liên hệ chỉ với một lần chạm, hỗ trợ quản lý hồ sơ trực tuyến, tối ưu trải nghiệm kết nối và xây dựng thương hiệu cá nhân.',
+
+            details: [
+
+                'Phát triển hệ thống trên kiến trúc Frontend Vue.js kết hợp Cloudflare Workers và cơ sở dữ liệu Cloudflare D1, cung cấp khả năng truy cập nhanh, độ trễ thấp và triển khai toàn cầu. Tích hợp công nghệ NFC giúp người dùng chia sẻ hồ sơ cá nhân, thông tin liên hệ và liên kết mạng xã hội mà không cần cài đặt ứng dụng.',
+
+                'Xây dựng cơ chế quản trị hồ sơ trực tuyến cho phép cập nhật thông tin cá nhân, liên kết doanh nghiệp và nội dung hiển thị theo thời gian thực. Thiết kế quy trình xác thực bảo mật với chức năng thay đổi mật khẩu, mã bảo mật quản trị và kiểm soát quyền truy cập đối với dữ liệu người dùng.',
+
+                'Tối ưu trải nghiệm sử dụng trên cả iOS và Android thông qua giao tiếp NFC chuẩn NDEF, đồng thời áp dụng chiến lược lưu trữ dữ liệu tập trung trên Cloudflare D1 kết hợp xử lý biên bằng Workers nhằm nâng cao hiệu năng truy xuất, khả năng mở rộng hệ thống và độ ổn định khi phục vụ số lượng lớn lượt truy cập.'
+            ]
+        },
+
+
         'pc-store': {
 
             name:
@@ -83,46 +101,6 @@ export default {
                 'Tích hợp hệ sinh thái Firebase giúp lưu trữ phi cấu trúc danh mục sản phẩm phức tạp cùng hình ảnh độ phân giải cao. Phát triển tính năng cập nhật trạng thái đơn hàng, theo dõi lịch sử giao dịch và hệ thống đánh giá sản phẩm theo thời gian thực nhờ giải pháp kết nối mạng WebSocket.',
 
                 'Xử lý tối ưu luồng phân tách dữ liệu biến thể sản phẩm sâu theo cấu hình kỹ thuật đặc thù ngành phần cứng máy tính. Áp dụng phương pháp kiểm thử hộp đen toàn diện trên nhiều thiết bị mô phỏng giúp tối ưu hóa hiệu suất ứng dụng, giảm thiểu độ trễ và đảm bảo tính ổn định.'
-            ]
-
-        },
-
-
-        'student-certificate-management': {
-
-            name:
-                'Hệ thống quản lý tín chỉ',
-
-            summary:
-                'Ứng dụng di động hỗ trợ số hóa quy trình quản lý, tra cứu và lưu trữ tập trung dữ liệu chứng chỉ môn học của sinh viên theo thời gian thực, tối ưu hiệu suất luồng nhập xuất dữ liệu lớn và thuật toán nén hình ảnh bảo mật.',
-
-            details: [
-
-                'Xây dựng ứng dụng dựa trên mô hình kiến trúc kết hợp giữa MVC và MBD giúp tối ưu hóa mã nguồn, dễ dàng bảo trì hệ thống. Tích hợp cơ sở dữ liệu NoSQL Firebase Cloud Firestore để lưu trữ, đồng bộ thời gian thực và hỗ trợ cơ chế bộ nhớ đệm khi mất kết nối mạng.',
-
-                'Phân quyền người dùng chặt chẽ giữa Quản trị viên và Nhân viên học vụ, phát triển tính năng tìm kiếm nâng cao cùng bộ lọc động đa tiêu chí. Xử lý tối ưu hiệu suất luồng nhập xuất dữ liệu quy mô lớn qua tệp cấu trúc CSV phục vụ công tác báo cáo định kỳ.',
-
-                'Tối ưu dung lượng lưu trữ bằng cách xây dựng thuật toán giảm kích thước hình ảnh, chuyển đổi ảnh đại diện sang chuỗi dữ liệu mã hóa Base64 trước khi đồng bộ. Tăng cường bảo mật thông qua cơ chế mã hóa mật khẩu và thiết lập Firestore Security Rules để kiểm soát quyền truy cập.'
-            ]
-
-        },
-
-
-        'online-banking': {
-
-            name:
-                'Hệ thống ngân hàng trực tuyến',
-
-            summary:
-                'Ứng dụng di động cung cấp giải pháp giao dịch tài chính tài khoản và hệ sinh thái dịch vụ đời sống toàn diện tích hợp xác thực bảo mật sinh trắc học vân tay cao cấp cùng cổng thanh toán điện tử VNPay trực tuyến an toàn.',
-
-            details: [
-
-                'Phát triển ứng dụng Android native bằng ngôn ngữ Java kết hợp XML Layout chuẩn giao diện Material Design giúp tối ưu hóa hiệu năng phản hồi mượt mà. Tích hợp bảo mật sinh trắc học qua BiometricPrompt API, cho phép xác thực dấu vân tay nhanh chóng khi đăng nhập và phê duyệt giao dịch tài chính.',
-
-                'Xây dựng hệ sinh thái dịch vụ đa dạng bằng cách giả lập kết nối bên thứ ba qua môi trường thử nghiệm Sandbox Services. Hệ thống xử lý mượt mà nghiệp vụ nạp tiền điện thoại, đặt vé máy bay và mua vé xem phim, kết hợp cổng VNPay SDK hỗ trợ quy trình thanh toán an toàn.',
-
-                'Sử dụng Firebase Realtime Database làm trung tâm lưu trữ, thiết lập cơ chế đồng bộ số dư tài khoản và cập nhật biến động theo thời gian thực. Phân tích yêu cầu nghiệp vụ thiết kế luồng tiền chặt chẽ, tối ưu các endpoint REST API nhằm giảm thiểu tỷ lệ xung đột khi mạng yếu.'
             ]
 
         },
@@ -165,7 +143,27 @@ export default {
                 'Tối ưu hóa chi phí vận hành hệ thống về mức 0 đồng nhờ tận dụng hệ sinh thái đám mây miễn phí của Google và GitHub Pages. Thiết lập các bộ lọc động thông minh trên Frontend hỗ trợ truy xuất nhanh thông tin phân loại đảng viên và tổng hợp số liệu báo cáo định kỳ.'
             ]
 
-        }
+        },
+
+        
+        'online-banking': {
+
+            name:
+                'Hệ thống ngân hàng trực tuyến',
+
+            summary:
+                'Ứng dụng di động cung cấp giải pháp giao dịch tài chính tài khoản và hệ sinh thái dịch vụ đời sống toàn diện tích hợp xác thực bảo mật sinh trắc học vân tay cao cấp cùng cổng thanh toán điện tử VNPay trực tuyến an toàn.',
+
+            details: [
+
+                'Phát triển ứng dụng Android native bằng ngôn ngữ Java kết hợp XML Layout chuẩn giao diện Material Design giúp tối ưu hóa hiệu năng phản hồi mượt mà. Tích hợp bảo mật sinh trắc học qua BiometricPrompt API, cho phép xác thực dấu vân tay nhanh chóng khi đăng nhập và phê duyệt giao dịch tài chính.',
+
+                'Xây dựng hệ sinh thái dịch vụ đa dạng bằng cách giả lập kết nối bên thứ ba qua môi trường thử nghiệm Sandbox Services. Hệ thống xử lý mượt mà nghiệp vụ nạp tiền điện thoại, đặt vé máy bay và mua vé xem phim, kết hợp cổng VNPay SDK hỗ trợ quy trình thanh toán an toàn.',
+
+                'Sử dụng Firebase Realtime Database làm trung tâm lưu trữ, thiết lập cơ chế đồng bộ số dư tài khoản và cập nhật biến động theo thời gian thực. Phân tích yêu cầu nghiệp vụ thiết kế luồng tiền chặt chẽ, tối ưu các endpoint REST API nhằm giảm thiểu tỷ lệ xung đột khi mạng yếu.'
+            ]
+
+        },
 
     }
 

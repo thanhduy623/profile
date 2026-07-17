@@ -47,6 +47,25 @@ export default {
             ]
         },
 
+
+        'digital-business-card': {
+            name:
+                '电子名片管理系统',
+
+            summary:
+                '基于 NFC 技术的电子名片平台，用户只需轻触即可分享联系信息，支持在线资料管理，优化商务连接体验，并提升个人品牌形象。',
+
+            details: [
+
+                '采用 Vue.js 前端架构，结合 Cloudflare Workers 与 Cloudflare D1 数据库开发，实现快速响应、低延迟及全球化部署。集成 NFC 技术，使用户无需安装应用程序即可分享个人资料、联系方式及社交媒体链接。',
+
+                '构建在线资料管理机制，支持实时更新个人信息、企业资料及展示内容。设计安全认证流程，包含密码管理、安全验证码及访问权限控制，有效保障用户数据安全。',
+
+                '通过符合 NDEF 标准的 NFC 通信协议，优化 iOS 与 Android 平台的使用体验。同时结合 Cloudflare D1 集中式数据存储与 Workers 边缘计算能力，提升系统扩展性、数据访问性能及高并发场景下的服务稳定性。'
+            ]
+        },
+
+
         'pc-store': {
             name: '电子商务系统',
 
@@ -61,34 +80,7 @@ export default {
             ]
         },
 
-        'student-certificate-management': {
-            name: '学分管理系统',
-
-            summary: '移动应用用于数字化管理、查询和集中存储学生课程证书数据，实现实时同步，并优化大规模数据导入导出与图像压缩安全机制。',
-
-            details: [
-                '采用 MVC 与 MBD 混合架构开发系统，提高代码可维护性。集成 Firebase Cloud Firestore NoSQL 数据库，实现实时同步及离线缓存机制。',
-
-                '实现管理员与教务人员之间的严格权限控制，开发高级搜索与多条件动态筛选功能。优化基于 CSV 文件的大规模数据导入导出流程，满足周期性报表需求。',
-
-                '通过图像压缩算法减少存储空间占用，在同步前将头像转换为 Base64 编码字符串。结合密码加密机制和 Firestore Security Rules 强化数据访问安全。'
-            ]
-        },
-
-        'online-banking': {
-            name: '网上银行系统',
-
-            summary: '移动金融应用，提供账户交易及生活服务生态系统，集成高级指纹生物识别认证和安全的 VNPay 在线支付网关。',
-
-            details: [
-                '采用 Java 与 XML Layout 开发原生 Android 应用，遵循 Material Design 规范，保证流畅响应性能。集成 BiometricPrompt API，实现登录与交易审批时的快速指纹验证。',
-
-                '通过 Sandbox Services 模拟第三方服务接入，构建丰富的生活服务生态。系统支持手机充值、机票预订、电影票购买等业务，并结合 VNPay SDK 实现安全支付。',
-
-                '采用 Firebase Realtime Database 作为核心数据存储，实现账户余额与交易变动的实时同步。根据业务需求设计严谨的资金流逻辑，并优化 REST API 以降低弱网环境下的数据冲突。'
-            ]
-        },
-
+        
         'real-estate-brokerage': {
             name: '房地产经纪系统',
 
@@ -115,6 +107,22 @@ export default {
 
                 '充分利用 Google 免费云服务与 GitHub Pages，实现零运营成本部署。通过前端智能动态筛选功能，快速查询党员分类信息并生成周期性统计报表。'
             ]
-        }
+        },
+
+
+        'online-banking': {
+            name: '网上银行系统',
+
+            summary: '移动金融应用，提供账户交易及生活服务生态系统，集成高级指纹生物识别认证和安全的 VNPay 在线支付网关。',
+
+            details: [
+                '采用 Java 与 XML Layout 开发原生 Android 应用，遵循 Material Design 规范，保证流畅响应性能。集成 BiometricPrompt API，实现登录与交易审批时的快速指纹验证。',
+
+                '通过 Sandbox Services 模拟第三方服务接入，构建丰富的生活服务生态。系统支持手机充值、机票预订、电影票购买等业务，并结合 VNPay SDK 实现安全支付。',
+
+                '采用 Firebase Realtime Database 作为核心数据存储，实现账户余额与交易变动的实时同步。根据业务需求设计严谨的资金流逻辑，并优化 REST API 以降低弱网环境下的数据冲突。'
+            ]
+        },
+
     }
 }

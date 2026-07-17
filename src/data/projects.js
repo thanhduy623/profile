@@ -54,6 +54,24 @@ export const projects = [
     },
 
     {
+        id: 'digital-business-card',
+        image: getImage('projects/danh-thiep-dien-tu.png'),
+        technologies: [
+            'NFC',
+            'Vue',
+            'Cloudflare Workers',
+            'Cloudflare D1',
+            'Vercel'
+        ],
+        roles: [
+            'BA',
+            'BE',
+            'FE',
+            'DB'
+        ]
+    },
+
+    {
         id: 'pc-store',
         image: getImage('projects/pc-store.png'),
         technologies: [
@@ -62,43 +80,6 @@ export const projects = [
             'Firebase Auth',
             'Firebase Storage',
             'WebSocket'
-        ],
-        roles: [
-            'BA',
-            'BE',
-            'FE',
-            'DB'
-        ]
-    },
-
-    {
-        id: 'student-certificate-management',
-        image: getImage('projects/quan-ly-tin-chi.png'),
-        technologies: [
-            'Android',
-            'Java',
-            'Firebase',
-            'XML',
-            'Gradle',
-            'RESTful API'
-        ],
-        roles: [
-            'BA',
-            'BE',
-            'FE',
-            'DB'
-        ]
-    },
-
-    {
-        id: 'online-banking',
-        image: getImage('projects/ngan-hang-truc-tuyen.png'),
-        technologies: [
-            'Java',
-            'XML Layout',
-            'Firebase',
-            'Biometric',
-            'VNPay'
         ],
         roles: [
             'BA',
@@ -141,5 +122,23 @@ export const projects = [
             'FE',
             'DB'
         ]
-    }
+    },
+
+    {
+        id: 'online-banking',
+        image: getImage('projects/ngan-hang-truc-tuyen.png'),
+        technologies: [
+            'Java',
+            'XML Layout',
+            'Firebase',
+            'Biometric',
+            'VNPay'
+        ],
+        roles: [
+            'BA',
+            'BE',
+            'FE',
+            'DB'
+        ]
+    },
 ]
